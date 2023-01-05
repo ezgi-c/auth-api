@@ -7,7 +7,7 @@
 ### Links and Resources
 
 - [ci/cd](https://github.com/ezgi-c/auth-api/actions) (GitHub Actions)
-- [back-end server url](https://auth-api-y6x8.onrender.com) 
+- [back-end server url](https://auth-api-2.onrender.com/) 
 <!-- - [front-end application](http://xyz.com) (when applicable) -->
 
 ### Setup
