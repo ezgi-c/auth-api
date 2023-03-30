@@ -3,6 +3,7 @@ const { Sequelize } = require('sequelize');
 const { makeAuthUser } = require('../auth/models/users-model');
 
 const { makeBlog } = require('./blog.model');
+const { makeTodo } = require('./todo.model');
 
 const DATABASE_URL =
   process.env.NODE_ENV === 'test'
@@ -27,8 +28,11 @@ const AuthUser = makeAuthUser(sequelize);
 
 const Blog = makeBlog(sequelize);
 
+const Todo = makeTodo(sequelize);
+
 module.exports = {
   sequelize,
   AuthUser,
   Blog,
+  Todo,
 };
