@@ -18,7 +18,7 @@
 - `TOKEN_SECRET`
 
 #### How to initialize/run your application (where applicable)
-
+  
 - `npm start`
 - `npx nodemon src/index.js`
 
