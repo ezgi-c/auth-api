@@ -1,9 +1,7 @@
 const express = require('express');
-
 const { Todo } = require('../models/index');
-
 const { ensureRole, checkToken } = require('../auth/router');
-
+const { v4: uuid } = require('uuid');
 const todoRoutes = express();
 
 todoRoutes.use(checkToken);
@@ -52,11 +50,13 @@ async function getTodo(req, res, next) {
 }
 
 async function createTodo(req, res, next) {
+  const id = uuid();
   const text = req.body.text;
   const assignee = req.body.assignee;
   const difficulty = req.body.difficulty;
   const complete = false;
   const todo = await Todo.create({
+    id,
     text,
     assignee,
     difficulty,
@@ -79,10 +79,10 @@ async function updateTodo(req, res, next) {
     const complete = req.body.complete ?? todo.complete;
 
     let updatedTodo = {
-        text,
-        assignee,
-        difficulty,
-        complete,
+      text,
+      assignee,
+      difficulty,
+      complete,
     };
 
     todo = await todo.update(updatedTodo);

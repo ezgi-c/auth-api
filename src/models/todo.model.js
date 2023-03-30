@@ -5,9 +5,11 @@ function todoModel(sequelize) {
     text: DataTypes.STRING,
     assignee: DataTypes.STRING,
     complete: DataTypes.BOOLEAN,
-    difficulty: DataTypes.NUMBER,
-    id: DataTypes.STRING, 
-    // __v: DataTypes.NUMBER,
+    difficulty: DataTypes.INTEGER,
+    id: {
+        type: DataTypes.STRING,
+        primaryKey: true
+      },    // __v: DataTypes.NUMBER,
   });
 }
 
