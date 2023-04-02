@@ -1,3 +1,14 @@
+# LAB - Class 34 - API Integration
+
+3/30/23 
+
+- added Todo model and routes to existing model and routes. 
+- NEXT: redeploy & connect to todo app
+
+
+
+
+
 # LAB - Class 08
 
 ## Project: Access Control
@@ -18,7 +29,7 @@
 - `TOKEN_SECRET`
 
 #### How to initialize/run your application (where applicable)
-
+  
 - `npm start`
 - `npx nodemon src/index.js`
 
